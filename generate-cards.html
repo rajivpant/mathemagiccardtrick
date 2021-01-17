@@ -18,6 +18,7 @@
 <body onload="generateAllCards();">
 
 <h1>Mathemagic Numbers Cards Generator</h1>
+Version: 1.1 Date: 2021-01-17
 <h2>By Fitz and Rajiv</h2>
 
 <form>
@@ -25,20 +26,24 @@
     <input id="numberOfCards" type="number" onchange="generateAllCards();" value="7">
 </form>
 
+<h3>How to Print Your Cards</h3>
 <p>
     Copy and paste the cards below into your word processor, adjust the page breaks
     so that individual cards are not split between pages, and then print.
     Cut each card along the dashed outlines.
 </p>
+<p id="messageFromApp"></p>
 
 <hr />
 <p id="mathemagicCards"></p>
 <hr />
 
+<h3>Credits</h3>
 <p>
     Thanks to Vijit Sharma and family for introducing Rajiv and Fitz to this math magic trick.
     Rajiv and Fitz coauthored the JavaScript here that generates the cards.
-    Fitz figured out the algorithmic pattern of numbers to be generated that works for each card.
+    Fitz figured out the generalized algorithmic pattern of numbers to be generated that works
+    for each card and for any number of cards.
 </p>
 
 <script language="JavaScript">
@@ -90,7 +95,7 @@ function generateAllCards() {
     var untilNumberPowerOfTwo = document.getElementById("numberOfCards").value; 
 
     if (untilNumberPowerOfTwo > 10) {
-        outputAll += "Currently, up to 10 cards are supported.";
+        document.getElementById("messageFromApp").innerHTML = "Currently, up to 10 cards are supported.";
         untilNumberPowerOfTwo = 10;
     }
 
