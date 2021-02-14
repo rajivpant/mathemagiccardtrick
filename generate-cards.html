@@ -7,11 +7,15 @@
                 border: 1px dashed black;
                 padding: 10px;
             }
-            th, td {
+            td {
                 border: 1px solid black;
-                padding: 10px;
-                    align-items: center;
-                    vertical-align: middle;
+                padding: 4px;
+                align-items: center;
+                vertical-align: middle;
+                text-align:center;
+                font-weight: bold;
+                /* I chose not to use a monospace font because it makes the 10 card set too wide to print on my setup. */
+                /* font-family: monospace, monospace; */
             }
             </style>
     </head>
@@ -90,12 +94,15 @@ function generateCard(fromNumber, untilNumber) {
 
 function generateAllCards() {
 
-    var outputAll = "<p>";
+    var outputAll = "";
+    var messageFromApp = "";
 
     var untilNumberPowerOfTwo = document.getElementById("numberOfCards").value; 
 
     if (untilNumberPowerOfTwo > 10) {
-        document.getElementById("messageFromApp").innerHTML = "Currently, up to 10 cards are supported.";
+        messageFromApp = "Currently, up to 10 cards are supported. " + 
+            "You would need to adjust bigger cards to fit on the width of default printer paper.";
+        document.getElementById("messageFromApp").innerHTML = messageFromApp;
         untilNumberPowerOfTwo = 10;
     }
 
@@ -103,7 +110,7 @@ function generateAllCards() {
 
         outputAll += generateCard(2**cardNumber, 2**untilNumberPowerOfTwo);
 
-        outputAll += "</p>";
+        outputAll += "<p>&nbsp;</p>";
     }
 
     document.getElementById("mathemagicCards").innerHTML = outputAll;
