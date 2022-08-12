@@ -4,6 +4,8 @@ Use the page [generate-cards.html](generate-cards.html) to generate your cards
 to print. 
 Read [how-it-is-done-and-tips.html](how-it-is-done-and-tips.html) for instructions
 on how to perform the magic trick.
+
+Here is the [https://rajiv.com/blog/2021/01/17/mathemagic-card-trick/](link to the blog post about this on rajiv.com).
 <hr />
 ### Source Code
 [https://github.com/rajivpant/mathemagiccardtrick/](github.com/rajivpant/mathemagiccardtrick)
