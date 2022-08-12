@@ -5,6 +5,9 @@ to print.
 Read [how-it-is-done-and-tips.html](how-it-is-done-and-tips.html) for instructions
 on how to perform the magic trick.
 <hr />
+### Source Code
+[https://github.com/rajivpant/mathemagiccardtrick/](github.com/rajivpant/mathemagiccardtrick)
+<hr />
 ### Credits
 Thanks to Vijit Sharma and family for introducing Rajiv and Fitz to this math magic trick.
 Rajiv and Fitz coauthored the JavaScript here that generates the cards.
